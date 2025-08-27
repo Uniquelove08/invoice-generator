@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+  <header>
+    <img src="image/logo.png" alt="invoice generator logo" class="logo">
+    <h1>INVOICE GENERATOR</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a>
+        <li><a href="#about" target="_parent" >About</a></li>
+        <li><a href="#service">Services</a></li>
+    </nav>
+  </header>
+  <div id="home">
+      <form>
+    <!-- Invoice Form Section -->
+    <div class="invoice-form">
+     <div class="invoice-form-left">
+     <div class="invoice-form-group">
+      <label for="from">Who is this from?</label>
+      <input type="text" id="from" name="from" placeholder="Who is this from?">
+    </div>
+    <div class="invoice-form-row">
+      <div class="invoice-form-group" style="flex:1; margin-right:10px;">
+        <label for="bill-to">Bill To</label>
+        <input type="text" id="bill-to" name="bill-to" placeholder="Who is this to?">
+      </div>
+      <div class="invoice-form-group" style="flex:1; margin-left:10px;">
+        <label for="ship-to">Ship To</label>
+        <input type="text" id="ship-to" name="ship-to" placeholder="(optional)">
+      </div>
+    </div>
+  </div>
+  <div class="invoice-form-right">
+    <div class="invoice-form-group">
+      <label for="date">Date<input type="date" id="date" name="date"></label>
+    </div>
+    <div class="invoice-form-group">
+      <label for="payment-terms">Payment Terms</label>
+      <input type="text" id="payment-terms" name="payment-terms">
+    </div>
+    <div class="invoice-form-group">
+      <label for="due-date">Due Date</label>
+      <input type="date" id="due-date" name="due-date">
+    </div>
+    <div class="invoice-form-group">
+      <label for="po-number">PO Number</label>
+      <input type="text" id="po-number" name="po-number">
+    </div>
+  </div>
+  </div>
+      </form>
+       <table class="line-items">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Rate</th>
+            <th>Amount</th>
+           <th class="no-print"></th>
+          </tr>
+        </thead>
+        <tbody id="invoiceBody">
+         <tr>
+          <td><input type="text" placeholder="Item description"></td>
+          <td><input type="number" value="1" min="1" class="qty"></td>
+          <td><input type="number" value="0" min="0" class="rate"></td>
+          <td class="lineTotal">0.00</td>
+          <td class="no-print"><button class="btn" onclick="removeRow(this)">X</button></td>
+        </tr>
+        </tbody>
+      </table>
+      <button class="btn no-print" onclick="addRow()">+ Line Item</button>
+
+      <div class="left" style="margin-top: 20px; float: right;">
+       <p>Subtotal: ₦<span id="subtotal">0.00</span></p>
+       <p>Discount: ₦<span id="discount">0.00</span></p>
+       <p>Tax (5%): ₦<span id="tax">0.00</span></p>
+       <h3>Total: ₦<span id="grandTotal">0.00</span></h3>
+     </div>
+     
+     <div class="right" style="margin-top: 20px;">
+      <div>
+        <label for="notes">Notes</label>
+        <textarea placeholder="Notes - any relevant information not already covered" id="notes" name="notes" cols="35" rows="3"></textarea>
+      </div> <br>
+      <div>
+        <label for="terms">Terms</label>
+        <textarea placeholder="Terms - any terms and conditions that apply" id="terms" name="terms" cols="35" rows="3"></textarea>
+      </div> <br>
+
+     <button class="btn no-print" onclick="window.print()">🖨️ Print / Save as PDF</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

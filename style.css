@@ -1,0 +1,247 @@
+
+.invoice-form-row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+   
+}
+
+header {
+    background-color:#ffffffc0;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    
+    
+}
+
+header img {
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 50%;
+}   
+header h1 {
+    color: #008000;
+    font-size: 30px;
+    margin-right: 10px;
+    text-align: right;
+    justify-content: left;
+    margin-top: 10px;
+    
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    flex-direction: row; 
+    flex-wrap: wrap;
+}
+
+header nav ul {
+    display: flex;       
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+
+header nav ul {
+    list-style: none;
+    list-style-position: inside;
+    justify-self: start;
+}    
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: #ffffff;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+header nav ul li a:hover {
+    color: #6afd50;
+}
+
+#home {
+  width: 920px;
+ margin: auto;
+  margin: auto;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+}
+
+#home {
+  height: 580px;
+  overflow-y: auto;
+}
+
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+
+button {
+  background-color: #0f8f64;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.invoice-form {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.invoice-form-left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.invoice-form-group {
+  margin-bottom: 10px;
+}
+
+.invoice-form-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: flex-start;
+}
+
+.invoice-form-right label {
+  margin-bottom: 2px;
+}
+
+.invoice-form-right input {
+  width: 100%;
+}
+.line-items {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.line-items thead {
+  background-color: #0f1a47;
+  color: #fff;
+}
+
+.line-items th,
+.line-items td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.line-items td input[type="number"],
+.line-items td input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.line-items td span {
+  margin-right: 5px;
+}
+
+.add-item {
+  background: transparent;
+  border: 1px solid #0f8f64;
+  color: #0f8f64;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.totals {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+}
+
+.totals span {
+  margin-right: 10px;
+}
+
+.right label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.right textarea {
+  min-height: 50px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 6px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+.right textarea:focus {
+  outline: none;
+  border-color: #0f8f64;
+}
+
+.right input[type="text"],
+.right input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.right input[type="text"]:focus,
+.right input[type="number"]:focus {
+  outline: none;
+  border-color: #0f8f64;
+}
+
+textarea {
+  border: 2px solid #000000;
+  height: 20px;
+  
+}
